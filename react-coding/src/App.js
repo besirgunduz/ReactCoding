@@ -1,7 +1,6 @@
 import "./App.css";
-import Header from "./components/Header";
-import User from "./components/User";
 import { useState } from "react";
+import Counter from "./components/Counter";
 
 function App() {
   const [name, setName] = useState("Beşir");
@@ -42,6 +41,8 @@ function App() {
       >
         change the address
       </button>
+
+      <Counter/>
     </div>
   );
 }
