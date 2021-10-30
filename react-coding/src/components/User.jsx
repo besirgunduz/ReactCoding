@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function User({ name, surname, isLoggedIn, age, friends }) {
   return (
     <div>
@@ -8,5 +10,11 @@ function User({ name, surname, isLoggedIn, age, friends }) {
     </div>
   );
 }
+
+User.propTypes = {
+  name: PropTypes.string.isRequired,
+  surname: PropTypes.string,
+  age: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+};
 
 export default User;
