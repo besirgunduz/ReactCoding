@@ -7,6 +7,7 @@ function App() {
   const [name, setName] = useState("Beşir");
   const [age, setAge] = useState(28);
   const [friends, setFriends] = useState(["Beşir", "Rıza", "Ahmet"]);
+  const [address, setAddress] = useState({ title: "Istanbul", zip: 34290 });
 
   return (
     <div className="App">
@@ -26,6 +27,20 @@ function App() {
 
       <button onClick={() => setFriends([...friends, "Ayşe"])}>
         Add new friend
+      </button>
+
+      <hr />
+      <br />
+
+      <h1>Address</h1>
+      <div>
+        {address.title} {address.zip}
+      </div>
+
+      <button
+        onClick={() => setAddress({ ...address, title: "Ankara", zip: 232526 })}
+      >
+        change the address
       </button>
     </div>
   );
