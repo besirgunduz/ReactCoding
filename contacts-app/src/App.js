@@ -1,9 +1,13 @@
 import "./App.css";
+import Contacts from "./components/Contacts";
 
 function App() {
-  return <div className="App">
-    <h1>Contacts App</h1>
-  </div>;
+  return (
+    <div className="App">
+      <h1>Contacts App</h1>
+      <Contacts />
+    </div>
+  );
 }
 
 export default App;
