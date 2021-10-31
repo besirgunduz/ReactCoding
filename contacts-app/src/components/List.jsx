@@ -24,11 +24,16 @@ function List({ contacts }) {
         onChange={onChangeInput}
       />
 
-      <ul>
+      <ul className="list">
         {filtered.map((contact, index) => (
-          <li key={index}>{contact.fullname}</li>
+          <li key={index}>
+            <span>{contact.fullname}</span>
+            <span>{contact.phonenumber}</span>
+          </li>
         ))}
       </ul>
+
+      <p>Total contacts ({filtered.length})</p>
     </div>
   );
 }
