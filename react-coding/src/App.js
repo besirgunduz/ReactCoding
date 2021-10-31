@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Counter from "./components/Counter";
 import InputExample from "./components/InputExample";
 
@@ -8,6 +8,16 @@ function App() {
   const [age, setAge] = useState(28);
   const [friends, setFriends] = useState(["Beşir", "Rıza", "Ahmet"]);
   const [address, setAddress] = useState({ title: "Istanbul", zip: 34290 });
+  const [number, setNumber] = useState(0);
+
+  useEffect(() => {
+    console.log("Component mount edildi");
+  },[]);
+
+  //sadece number state dinler
+  useEffect(() => {
+    console.log("number state güncellendi");
+  }, [number]);
 
   return (
     <div className="App">
@@ -45,6 +55,11 @@ function App() {
 
       <Counter />
       <InputExample />
+
+      <hr />
+      <h1>{number}</h1>
+
+      <button onClick={() => setNumber(number + 1)}>Click</button>
     </div>
   );
 }
