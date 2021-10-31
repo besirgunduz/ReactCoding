@@ -4,7 +4,6 @@ import Contacts from "./components/Contacts";
 function App() {
   return (
     <div className="App">
-      <h1>Contacts App</h1>
       <Contacts />
     </div>
   );
