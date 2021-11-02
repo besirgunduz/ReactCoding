@@ -60,6 +60,19 @@ function App() {
       <h1>{number}</h1>
 
       <button onClick={() => setNumber(number + 1)}>Click</button>
+      <hr />
+
+      <div style={{color:"red", backgroundColor:"white", padding:20}}>
+        Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir.
+        Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı
+        oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden
+        beri endüstri standardı sahte metinler olarak kullanılmıştır. Beşyüz yıl
+        boyunca varlığını sürdürmekle kalmamış, aynı zamanda pek değişmeden
+        elektronik dizgiye de sıçramıştır. 1960'larda Lorem Ipsum pasajları da
+        içeren Letraset yapraklarının yayınlanması ile ve yakın zamanda Aldus
+        PageMaker gibi Lorem Ipsum sürümleri içeren masaüstü yayıncılık
+        yazılımları ile popüler olmuştur.
+      </div>
     </div>
   );
 }
